@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import data from './mock.js';
+import key from './key.js';
 
 class App extends Component {
   render() {
+    console.log(data);
     return (
       <div className="App">
         <header className="App-header">
