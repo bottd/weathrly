@@ -18,9 +18,7 @@ class App extends Component {
           </form>
         </header>
         <Weather data={data}/>
-        <div className='seven-hour-forecast'>
-          <Hourly data={data}/>
-        </div>
+        <Hourly data={data}/>
         <div className='ten-day-forecast'>
           <Daily data={data}/>
         </div>
