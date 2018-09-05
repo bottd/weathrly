@@ -15,17 +15,17 @@ class Weather extends Component {
     return (
       <div className='Weather'>
         <h1 className='city-name-title'>{location}</h1>
-        <h2 className="current-date">{time}</h2>
-        <img src={weatherIcon}/>
-        <div className='temperatures'>
-          <h1 className='current-temp'>{temp}</h1>
+        <h3 className="current-date">{time}</h3>
+        <div className='icon-temp-container'>
+          <img className='condition-icon' src={weatherIcon}/>
+          <h1 className='current-temp'>{temp}&#8457;</h1>
           <div className='high-low-temp'>
-            <h5 className='high-temp'>High: {high}</h5>
-            <h5 className='low-temp'>Low: {low}</h5>
+            <h3 className='high-temp'>High: {high}&#8457;</h3>
+            <h3 className='low-temp'>Low: {low}&#8457;</h3>
           </div>
         </div>
-        <p>{condition}</p>
-        <p>{summary}</p>
+        <h2>{condition}</h2>
+        <h3>{summary}</h3>
       </div>
     );
 

@@ -12,23 +12,18 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <div className='location-search'>
+          <form className='location-search'>
             <input className='location-search-input' type='search' name='search' />
-            <button>Search</button>
-          </div>
+            <button className='location-search-button'>Search</button>
+          </form>
         </header>
         <Weather data={data}/>
-        <div className='seven-hour-forecast'>
-          <Card />
-          <Card />
-          <Card />
-        </div>
+        <Hourly data={data}/>          
         <div className='ten-day-forecast'>
           <Card />
           <Card />
           <Card />          
         </div>
-        <Hourly data={data}/>
       </div>
     );
   }

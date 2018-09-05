@@ -1,19 +1,36 @@
+* {
+  outline: none;
+}
+
 .App {
   text-align: center;
 }
 
 .location-search {
-
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.forecast-summary-dropdown {
-  position: relative;
-  display: inline-block;
+.location-search * {
+  height: 40px;
+  border: 2px solid #000;
 }
 
-.forecast-summary-dropdown:hover
-.forecast-summary-content {
-  display: block;
+.location-search-input {
+  font-size: 30px;
+
+  width: 50%;
+  -webkit-appearance:none;
+}
+
+.location-search-button:hover {
+  background-color: #ccc;
+}
+
+.location-search-button:active {
+  background-color: #808080;
 }
 
 .forecast-summary-content {
@@ -22,10 +39,6 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   position: absolute;
   z-index: 1;
-}
-
-.seven-hour-forecast {
-  display: flex;
 }
 
 .ten-day-forecast {
