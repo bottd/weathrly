@@ -3,6 +3,7 @@ import './App.css';
 import Card from './Card';
 import Weather from './Weather';
 import Hourly from './Hourly';
+import Daily from './Daily';
 import data from './mock';
 import key from './key';
 
@@ -18,12 +19,10 @@ class App extends Component {
         </header>
         <Weather data={data}/>
         <div className='seven-hour-forecast'>
-          <Hourly data={data}/>          
+          <Hourly data={data}/>
         </div>
         <div className='ten-day-forecast'>
-          <Card />
-          <Card />
-          <Card />          
+          <Daily data={data}/>
         </div>
       </div>
     );
