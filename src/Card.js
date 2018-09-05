@@ -5,14 +5,13 @@ class Card extends Component {
   render() {
     return (
       <div className='card-container'>
-        <h3>August 02, 2034</h3>
-        <i></i>
-        <h3>72&#8457; 64&#8457;</h3>
+        <h3>{this.props.date}</h3>
+        <img src={this.props.img}/>
+        <h3>{this.props.temp}</h3>
       </div>
-    )
+    );
   }
 }
-
 
 
 export default Card;

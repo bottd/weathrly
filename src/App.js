@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Card from './Card';
 import Weather from './Weather';
 import Hourly from './Hourly';
+import Daily from './Daily';
 import data from './mock';
 import key from './key';
 
@@ -18,13 +18,9 @@ class App extends Component {
           </form>
         </header>
         <Weather data={data}/>
-        <div className='seven-hour-forecast'>
-          <Hourly data={data}/>          
-        </div>
+        <Hourly data={data}/>
         <div className='ten-day-forecast'>
-          <Card />
-          <Card />
-          <Card />          
+          <Daily data={data}/>
         </div>
       </div>
     );
