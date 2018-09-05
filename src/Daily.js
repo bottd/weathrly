@@ -9,12 +9,7 @@ class Daily extends Component {
       let high = day.high.fahrenheit;
       let low = day.low.fahrenheit;
       return (
-        <div className='seven-hour-forecast'>
-          <p>{date}</p>
-          <img src={img}/>
-          <p>High: {high}</p>
-          <p>Low: {low}</p>
-        </div>
+        <Card date={date} img={img} temp={`Hi: ${high} Low: ${low}`}/>
       );
     });
     return (

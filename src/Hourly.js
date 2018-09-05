@@ -9,11 +9,8 @@ class Hourly extends Component {
       let img = day.icon_url;
       let avg = day.temp.english;
       return (
-        <div className='card'>
-          <p>Hour: {hour}</p>
-          <img src={img}/>
-          <p>Avg: {avg}</p>
-        </div>);
+        <Card date={hour} img={img} temp={avg}/>
+      )
     });
 
     return (
