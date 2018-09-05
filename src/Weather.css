@@ -1,0 +1,27 @@
+.city-name-title {
+  font-size: 1.5em;
+}
+
+.current-date {
+  font-size: large;
+}
+
+.temperatures {
+  display: block;
+}
+
+.current-temp {
+  display: inline-block;
+}
+
+.high-low-temp {
+  display: inline-block;
+}
+
+.high-temp {
+  margin: 0;
+}
+
+.low-temp {
+  margin: 0;
+}
