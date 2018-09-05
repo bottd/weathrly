@@ -1,47 +1,36 @@
+* {
+  outline: none;
+}
+
 .App {
   text-align: center;
 }
 
 .location-search {
-
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.city-name-title {
-  font-size: 1.5em;
+.location-search * {
+  height: 40px;
+  border: 2px solid #000;
 }
 
-.current-date {
-  font-size: large;
+.location-search-input {
+  font-size: 30px;
+
+  width: 50%;
+  -webkit-appearance:none;
 }
 
-.temperatures {
-  display: block;
+.location-search-button:hover {
+  background-color: #ccc;
 }
 
-.current-temp {
-  display: inline-block;
-}
-
-.high-low-temp {
-  display: inline-block;
-}
-
-.high-temp {
-  margin: 0;
-}
-
-.low-temp {
-  margin: 0;
-}
-
-.forecast-summary-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.forecast-summary-dropdown:hover
-.forecast-summary-content {
-  display: block;
+.location-search-button:active {
+  background-color: #808080;
 }
 
 .forecast-summary-content {
@@ -53,7 +42,8 @@
 }
 
 .seven-hour-forecast {
-  display: flex;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .ten-day-forecast {

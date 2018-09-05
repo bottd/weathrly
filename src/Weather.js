@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Weather.css';
 
 class Weather extends Component {
   render() {
@@ -13,16 +14,37 @@ class Weather extends Component {
 
     return (
       <div className='Weather'>
-        <p>Location: {location}</p>
-        <img src={weatherIcon}/>
-        <p>Condition: {condition}</p>
-        <p>{time}</p>
-        <p>{temp}</p>
-        <p>{summary}</p>
-        <p>High: {high}</p>
-        <p>Low: {low}</p>
+        <h1 className='city-name-title'>{location}</h1>
+        <h3 className="current-date">{time}</h3>
+        <div className='icon-temp-container'>
+          <img className='condition-icon' src={weatherIcon}/>
+          <h1 className='current-temp'>{temp}&#8457;</h1>
+          <div className='high-low-temp'>
+            <h3 className='high-temp'>High: {high}&#8457;</h3>
+            <h3 className='low-temp'>Low: {low}&#8457;</h3>
+          </div>
+        </div>
+        <h2>{condition}</h2>
+        <h3>{summary}</h3>
       </div>
     );
+
+    {/*
+        <h1 className="city-name-title">{Weather.location}</h1>
+        <h2 className="current-date">September 00, 2018</h2>
+        <div className='temperatures'>
+          <h1 className='current-temp'>75&#8457;</h1>
+          <div className='high-low-temp'>
+            <h5 className='high-temp'>82&#8457;</h5>
+            <h5 className='low-temp'>66&#8457;</h5>
+          </div>
+        </div>
+        <div className='forecast-summary-dropdown'>
+          <span className='forecast-summary-title'>Daily Forecast Summary</span>
+          <div className='forecast-summary-content'>
+            <p>This is today's forecast</p>
+          </div>
+        </div> */}
   }
 
 }
