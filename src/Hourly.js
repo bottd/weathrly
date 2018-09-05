@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Card from './Card';
+import './Hourly.css';
 
 class Hourly extends Component {
   render() {
@@ -9,14 +10,14 @@ class Hourly extends Component {
       let avg = (parseFloat(day.high.fahrenheit) + parseFloat(day.low.fahrenheit)) / 2;
       return (
         <div className='card'>
-        <p>Hour: {hour}</p>
-        <img src={img}/>
-        <p>Avg: {avg}</p>
+          <p>Hour: {hour}</p>
+          <img src={img}/>
+          <p>Avg: {avg}</p>
         </div>);
     });
 
     return (
-      <div className="Hourly-cast">
+      <div className="hourly-forecast">
         { cards }
       </div>
     );

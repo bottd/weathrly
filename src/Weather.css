@@ -1,0 +1,42 @@
+.city-name-title {
+  /*font-size: 1.5em;*/
+}
+
+.current-date {
+  /*font-size: large;*/
+}
+
+.icon-temp-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.condition-icon {
+  height: 100px;
+  margin-right: 20px;
+  width: auto;
+}
+
+.temperatures {
+  /*display: inline-block;*/
+}
+
+.current-temp {
+  display: inline-block;
+  font-size: 60px;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.high-low-temp {
+  display: inline-block;
+}
+
+.high-temp {
+  margin: 0;
+}
+
+.low-temp {
+  margin: 0;
+}

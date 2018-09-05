@@ -50,7 +50,7 @@ const data = {
     local_tz_long: 'America/New_York',
     local_tz_offset: '-0500',
     weather: 'Mostly Cloudy',
-    temperature_string: '46.0 F (7.8 C)',
+    temperature_string: '46.0',
     temp_f: 46.0,
     temp_c: 7.8,
     relative_humidity: '65%',
