@@ -8,6 +8,13 @@ import data from './mock';
 import key from './key';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      data
+    }
+    this.getData = this.getData.bind(this);
+  }
   render() {
     return (
       <div className="App">
@@ -15,15 +22,33 @@ class App extends Component {
           <form className='location-search'>
             <input className='location-search-input' type='search' name='search' />
             <button className='location-search-button'>Search</button>
+            <button onClick={((event) => {
+              event.preventDefault();
+              this.getData('San Francisco, CA').then(result => this.setState({data: result}));
+            })}>
+            Get San Fran</button>
           </form>
         </header>
-        <Weather data={data}/>
-        <Hourly data={data}/>
+        <Weather data={this.state.data}/>
+        <Hourly data={this.state.data}/>
         <div className='ten-day-forecast'>
-          <Daily data={data}/>
+          <Daily data={this.state.data}/>
         </div>
       </div>
     );
+  }
+  componentDidMount() {
+    const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/autoip.json`;
+    const promise = fetch(request).then(data => data.json()).then(data => this.setState({data}));
+  }
+  getData(location) {
+    location = location.split(',');
+    location[0] = location[0].replace(' ', '_');
+    console.log(location);
+    const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${location[1]}/${location[0]}.json`;
+    const promise = fetch(request).then(data => data.json());
+    console.log(promise);
+    return promise;
   }
 }
 
