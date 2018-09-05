@@ -41,6 +41,11 @@
   z-index: 1;
 }
 
+.seven-hour-forecast {
+  margin: 0 auto;
+  width: 80%;
+}
+
 .ten-day-forecast {
   display: flex;
 }

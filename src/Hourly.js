@@ -16,7 +16,7 @@ class Hourly extends Component {
     });
 
     return (
-      <div className="Hourly-cast">
+      <div className="hourly-forecast">
         { cards }
       </div>
     );

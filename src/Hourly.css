@@ -1,4 +1,9 @@
 .card {
-  display: inline-block;
+  /*display: inline-block;*/
 }
 
+.hourly-forecast {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
