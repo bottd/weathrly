@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import data from './mock.js';
-import key from './key.js';
-import Card from './Card.js';
+import Card from './Card';
+import Weather from './Weather';
+import Hourly from './Hourly';
+import data from './mock';
+import key from './key';
 
 class App extends Component {
   render() {
-    console.log(data);
     return (
       <div className="App">
         <header>
@@ -35,14 +36,14 @@ class App extends Component {
           <Card />
           <Card />
           <Card />
-
         </div>
         <div className='ten-day-forecast'>
           <Card />
           <Card />
-          <Card />
-          
+          <Card />          
         </div>
+        <Weather data={data}/>
+        <Hourly data={data}/>
       </div>
     );
   }
