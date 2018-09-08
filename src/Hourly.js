@@ -15,7 +15,7 @@ class Hourly extends Component {
 
     return (
       <div className="hourly-forecast">
-        { cards }
+        { cards.splice(0, 7) }
       </div>
     );
   }

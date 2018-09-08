@@ -30,7 +30,9 @@ class App extends Component {
           </form>
         </header>
         <Weather data={this.state.data}/>
-        <Hourly data={this.state.data}/>
+        <div className='seven-hour-forecast'>
+          <Hourly data={this.state.data}/>
+        </div>
         <div className='ten-day-forecast'>
           <Daily data={this.state.data}/>
         </div>
