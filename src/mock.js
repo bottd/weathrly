@@ -1062,7 +1062,7 @@ const data = {
   hourly_forecast: [
     {
       FCTTIME: {
-        hour: '12',
+        hour: '12:00PM',
         hour_padded: '12',
         min: '00',
         min_unpadded: '0',
@@ -1090,7 +1090,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '47', metric: '8' },
+      temp: { english: '47°F', metric: '8' },
       dewpoint: { english: '30', metric: '-1' },
       condition: 'Partly Cloudy',
       icon: 'partlycloudy',
@@ -1112,7 +1112,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '13',
+        hour: '13:00PM',
         hour_padded: '13',
         min: '00',
         min_unpadded: '0',
@@ -1140,7 +1140,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '49', metric: '9' },
+      temp: { english: '49°F', metric: '9' },
       dewpoint: { english: '29', metric: '-2' },
       condition: 'Partly Cloudy',
       icon: 'partlycloudy',
@@ -1162,7 +1162,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '14',
+        hour: '14:00PM',
         hour_padded: '14',
         min: '00',
         min_unpadded: '0',
@@ -1190,7 +1190,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '49', metric: '9' },
+      temp: { english: '49°F', metric: '9' },
       dewpoint: { english: '27', metric: '-3' },
       condition: 'Partly Cloudy',
       icon: 'partlycloudy',
@@ -1212,7 +1212,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '15',
+        hour: '15:00PM',
         hour_padded: '15',
         min: '00',
         min_unpadded: '0',
@@ -1240,7 +1240,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '51', metric: '11' },
+      temp: { english: '51°F', metric: '11' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1262,7 +1262,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '16',
+        hour: '16:00PM',
         hour_padded: '16',
         min: '00',
         min_unpadded: '0',
@@ -1290,7 +1290,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '50', metric: '10' },
+      temp: { english: '50°F', metric: '10' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1312,7 +1312,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '17',
+        hour: '17:00PM',
         hour_padded: '17',
         min: '00',
         min_unpadded: '0',
@@ -1340,7 +1340,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '48', metric: '9' },
+      temp: { english: '48°F', metric: '9' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1362,7 +1362,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '18',
+        hour: '18:00PM',
         hour_padded: '18',
         min: '00',
         min_unpadded: '0',
@@ -1390,7 +1390,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '45', metric: '7' },
+      temp: { english: '45°F', metric: '7' },
       dewpoint: { english: '26', metric: '-3' },
       condition: 'Clear',
       icon: 'clear',
@@ -1412,7 +1412,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '19',
+        hour: '19:00PM',
         hour_padded: '19',
         min: '00',
         min_unpadded: '0',
@@ -1440,7 +1440,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '43', metric: '6' },
+      temp: { english: '43°F', metric: '6' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1462,7 +1462,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '20',
+        hour: '20:00PM',
         hour_padded: '20',
         min: '00',
         min_unpadded: '0',
@@ -1490,7 +1490,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '41', metric: '5' },
+      temp: { english: '41°F', metric: '5' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1512,7 +1512,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '21',
+        hour: '21:00PM',
         hour_padded: '21',
         min: '00',
         min_unpadded: '0',
@@ -1540,7 +1540,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '39', metric: '4' },
+      temp: { english: '39°F', metric: '4' },
       dewpoint: { english: '24', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1562,7 +1562,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '22',
+        hour: '22:00PM',
         hour_padded: '22',
         min: '00',
         min_unpadded: '0',
@@ -1590,7 +1590,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '38', metric: '3' },
+      temp: { english: '38°F', metric: '3' },
       dewpoint: { english: '24', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
@@ -1612,7 +1612,7 @@ const data = {
     },
     {
       FCTTIME: {
-        hour: '23',
+        hour: '23:00PM',
         hour_padded: '23',
         min: '00',
         min_unpadded: '0',
@@ -1640,7 +1640,7 @@ const data = {
         age: '',
         UTCDATE: '',
       },
-      temp: { english: '37', metric: '3' },
+      temp: { english: '37°F', metric: '3' },
       dewpoint: { english: '25', metric: '-4' },
       condition: 'Clear',
       icon: 'clear',
