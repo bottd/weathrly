@@ -30,10 +30,12 @@ class App extends Component {
           </form>
         </header>
         <Weather data={this.state.data}/>
-        <div className='seven-hour-forecast'>
+        <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
+        <div className='forecast-containers'>
           <Hourly data={this.state.data}/>
         </div>
-        <div className='ten-day-forecast'>
+        <h2 className='ten-day-forecast-label'>10 Day Forecast:</h2>
+        <div className='forecast-containers'>
           <Daily data={this.state.data}/>
         </div>
       </div>

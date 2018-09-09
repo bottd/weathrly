@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Card from './Card';
+import './Daily.css';
 
 class Daily extends Component {
   render() {
@@ -13,7 +14,7 @@ class Daily extends Component {
       );
     });
     return (
-      <div className='ten-day-forecast'>
+      <div className='daily-forecast'>
         { forecast }
       </div>);
   }

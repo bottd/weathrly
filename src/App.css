@@ -33,20 +33,18 @@
   background-color: #808080;
 }
 
-.forecast-summary-content {
-  display: none;
-  background-color: #f8f8f8;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  position: absolute;
-  z-index: 1;
+.seven-hour-forecast-label {
+  margin-top: 100px;
 }
 
-.seven-hour-forecast {
+.ten-day-forecast-label {
+  margin-top: 50px;
+}
+
+.forecast-containers {
+  border: 1px solid blue;
   margin: 0 auto;
   width: 80%;
 }
 
-.ten-day-forecast {
-  display: flex;
-}
 
