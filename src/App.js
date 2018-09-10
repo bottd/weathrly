@@ -25,8 +25,11 @@ class App extends Component {
   render() {
     if (this.state.mode === 'welcome') {
       return (
-        <div className='welcome-search'>
-         <Search getData={this.getData}/>
+        <div className='welcome-page'>
+          <h1 className='welcome-title'>Weatherly</h1>
+          <div className='welcome-search'>
+            <Search getData={this.getData}/>
+          </div>
         </div>
       );
     } else if (this.state.mode === 'weather') {
