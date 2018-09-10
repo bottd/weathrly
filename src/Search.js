@@ -18,7 +18,10 @@ class Search extends Component {
           this.setState({search: event.target.value});
         }}
       />
-        <button className='location-search-button'>Search</button>
+        <button className='location-search-button' onClick={(event) => {
+          event.preventDefault();
+          this.props.getData(this.state.search);
+        }}>Search</button>
       </form>
     );
   }

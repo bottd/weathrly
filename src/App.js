@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <Search/>
+          <Search getData={this.getData}/>
         </header>
         <Weather data={this.state.data}/>
         <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
@@ -41,10 +41,8 @@ class App extends Component {
   getData(location) {
     location = location.split(',');
     location[0] = location[0].replace(' ', '_');
-    console.log(location);
     const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${location[1]}/${location[0]}.json`;
-    const promise = fetch(request).then(data => data.json());
-    console.log(promise);
+    const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result}));
     return promise;
   }
 }
