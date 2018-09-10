@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Search from './Search';
 import Card from './Card';
 import Weather from './Weather';
 import Hourly from './Hourly';
@@ -24,28 +25,14 @@ class App extends Component {
   render() {
     if (this.state.mode === 'welcome') {
       return (
-        <form className='welcome-search'>
-          <input className='location-search-input' type='search' name='search' />
-          <button className='location-search-button'>Search</button>
-          <button onClick={((event) => {
-            event.preventDefault();
-            this.getData('San Francisco, CA').then(result => this.setState({data: result, mode: 'weather'}));
-          })}>
-          Get San Fran</button>
-        </form>
+        <div>
+         <Search className='welcome-search' getData={this.getData}/>
+        </div>
       );
     } else if (this.state.mode === 'weather') {
       return (
         <div className="App">
-          <form className='location-search'>
-            <input className='location-search-input' type='search' name='search' />
-            <button className='location-search-button'>Search</button>
-            <button onClick={((event) => {
-              event.preventDefault();
-              this.getData('San Francisco, CA').then(result => this.setState({data: result, mode: 'weather'}));
-            })}>
-            Get San Fran</button>
-          </form>
+          <Search className='location-search' getData={this.getData}/>
           <Weather data={this.state.data} icons={this.props.icons}/>
           <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
             <Hourly data={this.state.data} icons={this.props.icons}/>
