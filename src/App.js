@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Search from './Search';
 import Card from './Card';
 import Weather from './Weather';
 import Hourly from './Hourly';
@@ -19,15 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <header>
-          <form className='location-search'>
-            <input className='location-search-input' type='search' name='search' />
-            <button className='location-search-button'>Search</button>
-            <button onClick={((event) => {
-              event.preventDefault();
-              this.getData('San Francisco, CA').then(result => this.setState({data: result}));
-            })}>
-            Get San Fran</button>
-          </form>
+          <Search/>
         </header>
         <Weather data={this.state.data}/>
         <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
