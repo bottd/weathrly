@@ -1,5 +1,11 @@
 .card-container {
-  border: 1px solid red;
+  background-color: #7A86AD;
+  border: 1px solid #023436;
   display: inline-block;
   width: 100%;
+}
+
+.card-icon {
+  height: 50px;
+  width: auto;
 }

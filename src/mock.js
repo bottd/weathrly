@@ -494,7 +494,7 @@ const data = {
             celsius: '7',
           },
           conditions: 'Chance of Rain',
-          icon: 'chancerain',
+          icon: 'rain',
           icon_url: 'http://icons.wxug.com/i/c/k/chancerain.gif',
           skyicon: '',
           pop: 80,
