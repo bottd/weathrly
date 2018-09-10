@@ -12,32 +12,40 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+      mode: 'welcome',
       data
     }
     this.getData = this.getData.bind(this);
   }
+
+  showWeather() {
+    this.setState({mode: 'weather'});
+  }
+
   render() {
-    return (
-      <div className="App">
-        <header>
-          <Search getData={this.getData}/>
-        </header>
-        <Weather data={this.state.data}/>
-        <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
-        <div className='forecast-containers'>
-          <Hourly data={this.state.data}/>
+    if (this.state.mode === 'welcome') {
+      return (
+        <div>
+         <Search className='welcome-search' getData={this.getData}/>
         </div>
-        <h2 className='ten-day-forecast-label'>10 Day Forecast:</h2>
-        <div className='forecast-containers'>
-          <Daily data={this.state.data}/>
+      );
+    } else if (this.state.mode === 'weather') {
+      return (
+        <div className="App">
+          <Search className='location-search' getData={this.getData}/>
+          <Weather data={this.state.data} icons={this.props.icons}/>
+          <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
+            <Hourly data={this.state.data} icons={this.props.icons}/>
+          <h2 className='ten-day-forecast-label'>10 Day Forecast:</h2>
+            <Daily data={this.state.data} icons={this.props.icons}/>
         </div>
-      </div>
-    );
+      );  
+    }    
   }
-  componentDidMount() {
-    const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/autoip.json`;
-    const promise = fetch(request).then(data => data.json()).then(data => this.setState({data}));
-  }
+  // componentDidMount() {
+  //   const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/autoip.json`;
+  //   const promise = fetch(request).then(data => data.json()).then(data => this.setState({data}));
+  // }
   getData(location) {
     location = location.split(',');
     location[0] = location[0].replace(' ', '_');
@@ -45,6 +53,8 @@ class App extends Component {
     const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result}));
     return promise;
   }
+
+
 }
 
 export default App;

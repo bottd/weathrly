@@ -1,16 +1,29 @@
 * {
   outline: none;
+  color: #023436;
 }
 
 .App {
   text-align: center;
+  background-color: #8BE5DF;
+}
+
+.welcome-search {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.welcome-search * {
+  height: 40px;
+  border: 2px solid #000;
 }
 
 .location-search {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .location-search * {
@@ -39,12 +52,6 @@
 
 .ten-day-forecast-label {
   margin-top: 50px;
-}
-
-.forecast-containers {
-  border: 1px solid blue;
-  margin: 0 auto;
-  width: 80%;
 }
 
 
