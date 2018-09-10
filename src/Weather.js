@@ -4,7 +4,7 @@ import './Weather.css';
 class Weather extends Component {
   render() {
     let location = this.props.data.current_observation.display_location.full;
-    let weatherIcon = this.props.data.current_observation.icon_url;
+    let weatherIcon = this.props.data.current_observation.icon;
     let condition = this.props.data.current_observation.weather;
     let time = this.props.data.current_observation.observation_time;
     let temp = this.props.data.current_observation.temperature_string;
@@ -17,7 +17,7 @@ class Weather extends Component {
         <h1 className='city-name-title'>{location}</h1>
         <h3 className="current-date">{time}</h3>
         <div className='icon-temp-container'>
-          <img className='condition-icon' src={weatherIcon}/>
+          <img className='condition-icon' src={this.props.icons[weatherIcon]}/>
           <h1 className='current-temp'>{temp}&#8457;</h1>
           <div className='high-low-temp'>
             <h3 className='high-temp'>High: {high}&#8457;</h3>
