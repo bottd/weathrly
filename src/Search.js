@@ -8,9 +8,9 @@ class Search extends Component {
   }
   render() {
     return (
-      <form className='search'>
+      <form>
         <input
-        className='location-search-input'
+        className='search-input'
         type='search'
         name='search'
         value={this.state.search}
@@ -18,7 +18,7 @@ class Search extends Component {
           this.setState({search: event.target.value});
         }}
       />
-        <button className='location-search-button' onClick={(event) => {
+        <button className='search-button' onClick={(event) => {
           event.preventDefault();
           this.props.getData(this.state.search);
         }}>Search</button>

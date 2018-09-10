@@ -10,25 +10,18 @@
 
 .welcome-search {
   align-items: center;
+  background-color: #8BE5DF;
   display: flex;
   height: 100vh;
+  margin: 0 auto;
   justify-content: center;
-}
-
-.welcome-search * {
-  height: 40px;
-  border: 2px solid #000;
 }
 
 .location-search {
   align-items: center;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
-}
-
-.location-search * {
-  height: 40px;
-  border: 2px solid #000;
 }
 
 .location-search-input {

@@ -25,14 +25,16 @@ class App extends Component {
   render() {
     if (this.state.mode === 'welcome') {
       return (
-        <div>
-         <Search className='welcome-search' getData={this.getData}/>
+        <div className='welcome-search'>
+         <Search getData={this.getData}/>
         </div>
       );
     } else if (this.state.mode === 'weather') {
       return (
         <div className="App">
-          <Search className='location-search' getData={this.getData}/>
+          <div className='location-search'>
+            <Search getData={this.getData}/>
+          </div>
           <Weather data={this.state.data} icons={this.props.icons}/>
           <h2 className='seven-hour-forecast-label'>7 Hour Forecast:</h2>
             <Hourly data={this.state.data} icons={this.props.icons}/>
@@ -50,7 +52,7 @@ class App extends Component {
     location = location.split(',');
     location[0] = location[0].replace(' ', '_');
     const request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${location[1]}/${location[0]}.json`;
-    const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result}));
+    const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result, mode: 'weather'}));
     return promise;
   }
 
