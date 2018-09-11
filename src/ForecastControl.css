@@ -18,12 +18,10 @@
   background-color: #999;
 }
 
-.hourly-forecast-button {/*
-  border-top-right-radius: 150%;
-  border-top-left-radius: 30px;*/
+.hourly-forecast-button {
+  border-top-left-radius: 10px;
 }
 
-.daily-forecast-button {/*
-  border-top-left-radius: 150%;
-  border-top-right-radius: 30px;
-*/}
+.daily-forecast-button {
+  border-top-right-radius: 10px;
+}

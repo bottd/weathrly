@@ -1,17 +1,35 @@
 .daily-forecast {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
   margin: 0 auto 30px;
   width: 80%;
 }
 
-.daily-forecast .card-container {
-  width: 10%;
+@media only screen and (max-width: 1000px) {
+  .daily-forecast {
+    grid-template-columns: auto auto auto auto;
+  }
+
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
   .daily-forecast {
-    
+    grid-template-columns: auto auto auto;
   }
+
 }
+
+@media only screen and (max-width: 600px) {
+  .daily-forecast {
+    grid-template-columns: auto auto;
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+  .daily-forecast {
+    grid-template-columns: auto;
+  }
+
+}
+
