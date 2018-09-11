@@ -12,7 +12,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      mode: 'welcome',
+      mode: 'weather',
       data
     }
     this.getData = this.getData.bind(this);

@@ -14,8 +14,7 @@ class Weather extends Component {
 
     return (
       <div className='Weather'>
-        <h1 className='city-name-title'>{location}</h1>
-        <h3 className="current-date">{time}</h3>
+        <h2 className='city-name-title'>{location}</h2>
         <div className='icon-temp-container'>
           <img className='condition-icon' src={this.props.icons[weatherIcon]}/>
           <h1 className='current-temp'>{temp}&#8457;</h1>
@@ -24,8 +23,9 @@ class Weather extends Component {
             <h3 className='low-temp'>Low: {low}&#8457;</h3>
           </div>
         </div>
-        <h2>{condition}</h2>
-        <h3>{summary}</h3>
+        <h2 className='current-condition'>{condition}</h2>
+        <h2 className='current-summary'>{summary}</h2>
+        <h3 className="current-date">{time}</h3>
       </div>
     );
 

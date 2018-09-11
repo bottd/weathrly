@@ -1,10 +1,13 @@
 .city-name-title {
-  /*font-size: 1.5em;*/
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
-.current-date {
-  /*font-size: large;*/
+.city-name-title,
+.current-condition {
+  font-size: 28px;
 }
+
 
 .icon-temp-container {
   align-items: center;
@@ -16,10 +19,6 @@
   height: 100px;
   margin-right: 20px;
   width: auto;
-}
-
-.temperatures {
-  /*display: inline-block;*/
 }
 
 .current-temp {
@@ -39,4 +38,17 @@
 
 .low-temp {
   margin: 0;
+}
+
+.current-condition {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.current-summary {
+  font-size: 22px;
+}
+
+.current-date {
+  /*font-size: large;*/
 }
