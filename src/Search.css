@@ -11,13 +11,14 @@ form * {
 }
 
 .search-input {
+  -webkit-appearance:none;
   border: 3px solid #000;
+  border-radius: 10px 0 0 10px;
   border-right: none;
   box-shadow: -1px 0 1px 1px #999 inset;
   font-size: 30px;
-  border-radius: 10px 0 0 10px;
+  padding-right: 10px;
   width: 60%;
-  -webkit-appearance:none;
 }
 
 .search-button {
