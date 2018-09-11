@@ -2,6 +2,16 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   width: 80%;
+}
+
+.daily-forecast .card-container {
+  width: 10%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .daily-forecast {
+    
+  }
 }
