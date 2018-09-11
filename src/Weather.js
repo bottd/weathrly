@@ -9,8 +9,8 @@ class Weather extends Component {
     let time = this.props.data.current_observation.observation_time;
     let temp = this.props.data.current_observation.temperature_string;
     let summary = this.props.data.forecast.txt_forecast.forecastday[0].fcttext;
-    let low = this.props.data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
-    let high = this.props.data.forecast.simpleforecast.forecastday[0].low.fahrenheit;
+    let low = this.props.data.forecast.simpleforecast.forecastday[0].low.fahrenheit;
+    let high = this.props.data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
 
     return (
       <div className='Weather'>
