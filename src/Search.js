@@ -4,11 +4,16 @@ import './Search.css';
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.state = {search: '' };
+    this.state = {search: '', answers: []};
   }
   render() {
     return (
       <form>
+        <div className='suggestion'>
+          <div className='suggestion-text'>
+          {this.state.answers[0]}
+          </div>
+        </div>
         <input
         list='suggestedCities'
         className='search-input'

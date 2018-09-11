@@ -10,14 +10,36 @@ form * {
   height: 40px;
 }
 
+.suggestion {
+  box-sizing: border-box;
+  position: relative;
+  text-align: left;
+  background-color: #fff;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 30px;
+  width: 79%;
+}
+
+.suggestion-text {
+  -webkit-appearance:none;
+  font: 400 11px system-ui;
+  color: #D3D3D3;
+  font-size: 30px;
+  margin-top: 3px;
+  margin-left: 2px;
+
+}
+
 .search-input {
   -webkit-appearance:none;
+  position: absolute;
   border: 3px solid #000;
-  border-radius: 10px 0 0 10px;
-  border-right: none;
+  border-radius: 10px;
   box-shadow: -1px 0 1px 1px #999 inset;
   font-size: 30px;
   padding-right: 10px;
+  background-color: transparent;
   width: 60%;
 }
 
