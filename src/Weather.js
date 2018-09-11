@@ -7,7 +7,7 @@ class Weather extends Component {
     let weatherIcon = this.props.data.current_observation.icon;
     let condition = this.props.data.current_observation.weather;
     let time = this.props.data.current_observation.observation_time;
-    let temp = this.props.data.current_observation.temperature_string;
+    let temp = this.props.data.current_observation.temp_f;
     let summary = this.props.data.forecast.txt_forecast.forecastday[0].fcttext;
     let low = this.props.data.forecast.simpleforecast.forecastday[0].low.fahrenheit;
     let high = this.props.data.forecast.simpleforecast.forecastday[0].high.fahrenheit;

@@ -7,7 +7,7 @@ class Card extends Component {
       <div className='card-container'>
         <h3>{this.props.date}</h3>
         <img className='card-icon' src={this.props.img}/>
-        <h3>{this.props.temp}</h3>
+        <h3>{this.props.temp}&#8457;</h3>
       </div>
     );
   }
