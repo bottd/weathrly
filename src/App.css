@@ -5,6 +5,7 @@
 
 html {
   background-color: #8BE5DF;
+  height: 100%;
 }
 
 .welcome-page {
@@ -30,6 +31,7 @@ html {
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .location-search {

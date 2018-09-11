@@ -14,7 +14,7 @@ class App extends Component {
     super();
     this.state = {
       hourly: true,
-      mode: 'weather',
+      mode: 'welcome',
       data
     }
     this.getData = this.getData.bind(this);
