@@ -14,15 +14,11 @@ class App extends Component {
     super();
     this.state = {
       hourly: true,
-      mode: 'welcome',
+      mode: 'weather',
       data
     }
     this.getData = this.getData.bind(this);
     this.toggleHourly = this.toggleHourly.bind(this);
-  }
-
-  showWeather() {
-    this.setState({mode: 'weather'});
   }
 
   render() {
@@ -43,7 +39,7 @@ class App extends Component {
           </div>
           <Weather data={this.state.data} icons={this.props.icons}/>
           <h2 className='forecast-label'>Forecast</h2>
-          <ForecastControl toggleHourly={this.toggleHourly}/>
+          <ForecastControl currentHourly={this.state.hourly} toggleHourly={this.toggleHourly}/>
           { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
           { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
