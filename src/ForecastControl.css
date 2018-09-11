@@ -1,0 +1,29 @@
+.forecast-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.hourly-forecast-button,
+.daily-forecast-button {
+  background-color: #808080;
+  border: none;
+  height: 40px;
+  width: 50%;
+}
+
+.hourly-forecast-button:disabled, 
+.daily-forecast-button:disabled {
+  background-color: #999;
+}
+
+.hourly-forecast-button {/*
+  border-top-right-radius: 150%;
+  border-top-left-radius: 30px;*/
+}
+
+.daily-forecast-button {/*
+  border-top-left-radius: 150%;
+  border-top-right-radius: 30px;
+*/}
