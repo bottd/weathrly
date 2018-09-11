@@ -8,6 +8,7 @@ import Hourly from './Hourly';
 import Daily from './Daily';
 import data from './mock';
 import key from './key';
+import Trie from './Trie';
 
 class App extends Component {
   constructor() {
@@ -47,8 +48,8 @@ class App extends Component {
           { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
           { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
-      ); 
-    }    
+      );
+    }
   }
   getData(location) {
     location = location.split(',');
