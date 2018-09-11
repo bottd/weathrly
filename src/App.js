@@ -47,8 +47,8 @@ class App extends Component {
           { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
           { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
-      );
-    }
+      ); 
+    }    
   }
   getData(location) {
     location = location.split(',');

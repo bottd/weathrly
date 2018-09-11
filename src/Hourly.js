@@ -5,7 +5,7 @@ import './Hourly.css';
 class Hourly extends Component {
   render() {
     let cards = this.props.data.hourly_forecast.map(day => {
-      let hour = day.FCTTIME.hour;
+      let hour = day.FCTTIME.civil;
       let weatherIcon = day.icon;
       let avg = day.temp.english;
       return (

@@ -21,7 +21,7 @@ class Search extends Component {
         <button className='search-button' onClick={(event) => {
           event.preventDefault();
           this.props.getData(this.state.search);
-        }}>Search</button>
+        }}><img className='search-button-icon' src='images/search.svg' /></button>
       </form>
     );
   }
