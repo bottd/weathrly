@@ -29,8 +29,13 @@ class Trie {
   suggest(phrase) {
     let letters = phrase.split('');
     let key = letters.reduce((key, letter) => {
-      return key[letter];
+      if ( key[letter]) {
+        return key[letter];
+      } else {
+        return false;
+      }
     }, this);
+    if (key === undefined) { return [] }
 
     return this.getWords(phrase, key);
   }
