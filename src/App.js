@@ -44,7 +44,7 @@ class App extends Component {
           <h2 className='ten-day-forecast-label'>10 Day Forecast:</h2>
             <Daily data={this.state.data} icons={this.props.icons}/>
         </div>
-      );  
+      ); 
     }    
   }
   // componentDidMount() {
