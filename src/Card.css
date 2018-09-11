@@ -1,9 +1,9 @@
 .card-container {
   background-color: #7A86AD;
-  border: 1px solid #023436;
   box-sizing: border-box;
   display: inline-block;
   height: auto;
+  outline: 2px solid #023436;
 }
 
 .card-day {
