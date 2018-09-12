@@ -6,8 +6,9 @@ import Weather from './Weather';
 import ForecastControl from './ForecastControl';
 import Hourly from './Hourly';
 import Daily from './Daily';
-import data from './mock';
 import key from './key';
+import Trie from './Trie';
+import data from './largest1000cities';
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,17 @@ class App extends Component {
     }
     this.getData = this.getData.bind(this);
     this.toggleHourly = this.toggleHourly.bind(this);
+    this.suggestCities = this.suggestCities.bind(this);
+  }
+
+  componentDidMount(){
+    let cities = new Trie();
+    cities.populate(data);
+    this.setState({cities});
+  }
+
+  suggestCities(prefix){
+    return this.state.cities.suggest(prefix).slice(0,10);
   }
 
   showWeather() {
@@ -31,7 +43,7 @@ class App extends Component {
         <div className='welcome-page'>
           <h1 className='welcome-title'>Weatherly</h1>
           <div className='welcome-search'>
-            <Search getData={this.getData}/>
+            <Search getData={this.getData} suggestCities={this.suggestCities}/>
           </div>
         </div>
       );
@@ -39,7 +51,7 @@ class App extends Component {
       return (
         <div className="App">
           <div className='location-search'>
-            <Search getData={this.getData}/>
+            <Search getData={this.getData} suggestCities={this.suggestCities}/>
           </div>
           <Weather data={this.state.data} icons={this.props.icons}/>
           <h2 className='forecast-label'>Forecast</h2>
@@ -47,8 +59,8 @@ class App extends Component {
           { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
           { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
-      ); 
-    }    
+      );
+    }
   }
   getData(location) {
     location = location.split(',');
