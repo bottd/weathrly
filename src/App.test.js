@@ -22,16 +22,17 @@ describe('App', () => {
     ReactDOM.unmountComponentAtNode(div);
   });
 
-  it.skip('mounts cities to trie', () => {
-
-  })
-
   it('suggests cities', () => {
     expect(instance.suggestCities('Denv')).toEqual(['Denver, CO']);
   })
 
-  it.skip('retrieves data from api', () => {
-    expect(instance.getData(['Denver, CO'])).toEqual(false);
+  it('retrieves data from api', () => {
+    let message;
+    return fetch('http://api.wunderground.com/api/d85b8701d1756fa1/conditions/hourly/forecast10day/q/co/denver.json')
+        .then(() => message = 'Success')
+        .catch((err) => message = 'Error!!!!');
+    expect(message).toEqual('Success');
+    // expect(instance.getData('Denver, CO')).toBeDefined();
   })
 
   it('toggles hourly state', () => {
