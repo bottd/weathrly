@@ -7,7 +7,7 @@
 
 .hourly-forecast-button,
 .daily-forecast-button {
-  background-color: #808080;
+  background-color: #FF8330;
   border: 2px solid #023436;
   font-size: 18px;
   font-weight: bold;
@@ -15,11 +15,10 @@
   width: 50%;
 }
 
-.hourly-forecast-button:disabled, 
+.hourly-forecast-button:disabled,
 .daily-forecast-button:disabled {
-  background-color: #999;
-  border: none;
-  font-weight: normal;
+  background-color: #FF6700;
+  text-decoration: underline;
 }
 
 .hourly-forecast-button {
