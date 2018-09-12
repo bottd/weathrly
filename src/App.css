@@ -5,6 +5,7 @@
 
 html {
   background-color: #8BE5DF;
+  height: 100%;
 }
 
 .welcome-page {
@@ -30,6 +31,7 @@ html {
 
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .location-search {
@@ -39,27 +41,7 @@ html {
   justify-content: center;
 }
 
-.location-search-input {
-  font-size: 30px;
-
-  width: 50%;
-  -webkit-appearance:none;
-}
-
-.location-search-button:hover {
-  background-color: #ccc;
-}
-
-.location-search-button:active {
-  background-color: #808080;
-}
-
-.seven-hour-forecast-label {
-  margin-top: 100px;
-}
-
-.ten-day-forecast-label {
+.forecast-label {
   margin-top: 50px;
 }
-
 

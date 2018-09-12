@@ -33,10 +33,6 @@ class App extends Component {
     return this.state.cities.suggest(prefix).slice(0,10);
   }
 
-  showWeather() {
-    this.setState({mode: 'weather'});
-  }
-
   render() {
     if (this.state.mode === 'welcome') {
       return (
@@ -55,7 +51,7 @@ class App extends Component {
           </div>
           <Weather data={this.state.data} icons={this.props.icons}/>
           <h2 className='forecast-label'>Forecast</h2>
-          <ForecastControl toggleHourly={this.toggleHourly}/>
+          <ForecastControl currentHourly={this.state.hourly} toggleHourly={this.toggleHourly}/>
           { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
           { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
