@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Search from './Search';
-import Card from './Card';
 import Weather from './Weather';
 import ForecastControl from './ForecastControl';
 import Hourly from './Hourly';
@@ -23,10 +22,14 @@ class App extends Component {
     this.suggestCities = this.suggestCities.bind(this);
   }
 
-  componentDidMount(){
+  componentWillMount(){
     let cities = new Trie();
     cities.populate(data);
     this.setState({cities});
+    let location = localStorage.getItem('location');
+    if (location) {
+      this.getData(location);
+    }
   }
 
   suggestCities(prefix){
