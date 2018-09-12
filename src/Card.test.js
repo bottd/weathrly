@@ -5,7 +5,6 @@ import Card from './Card';
 
 describe('Card', () => {
   let wrapper;
-  let instance;
 
   beforeEach(() => {
     wrapper = shallow(<Card />);
