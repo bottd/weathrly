@@ -70,6 +70,7 @@ class App extends Component {
     const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result, mode: 'weather'}));
     return promise;
   }
+  
   toggleHourly(){
     this.setState({hourly: !this.state.hourly});
   }
