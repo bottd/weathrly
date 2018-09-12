@@ -1,9 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { shallow, mount } from 'enzyme';
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe('App', () => {
+  let wrapper;
+  let instance;
+
+  beforeEach(() => {
+    wrapper = shallow(<App />);
+    instance = wrapper.instance();
+  })
+
+  it('should exist', () => {
+    expect(wrapper).toBeDefined();
+  })
+
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<App />, div);
+    ReactDOM.unmountComponentAtNode(div);
+  });
+
+  it('suggests cities', () => {
+    expect(instance.suggestCities('Denv')).toEqual(['Denver, CO']);
+  })
+
+  it('retrieves data from api', () => {
+    let message;
+    return fetch('http://api.wunderground.com/api/d85b8701d1756fa1/conditions/hourly/forecast10day/q/co/denver.json')
+        .then(() => message = 'Success')
+        .catch((err) => message = 'Error!!!!');
+    expect(message).toEqual('Success');
+    // expect(instance.getData('Denver, CO')).toBeDefined();
+  })
+
+  it('toggles hourly state', () => {
+    expect(instance.state.hourly).toBeTruthy();
+    instance.toggleHourly();
+    expect(instance.state.hourly).toBeFalsy();
+  })
+
+})
+
