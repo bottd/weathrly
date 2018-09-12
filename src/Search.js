@@ -4,7 +4,7 @@ import './Search.css';
 class Search extends Component {
   constructor(props) {
     super(props);
-    this.state = {search: '', answers: []};
+    this.state = {search: '', answers: ['New York, NY']};
   }
   render() {
     return (
