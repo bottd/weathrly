@@ -1,3 +1,3 @@
 #### Weatherly wireframe 
 
-![Screenshot](IMG_0910.jpg)
+![Screenshot](public/images/IMG_0910.jpg)
