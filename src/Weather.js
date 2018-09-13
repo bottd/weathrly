@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Weather.css';
 
 class Weather extends Component {
   render() {
-    let location = this.props.data.current_observation.display_location.full;
-    let weatherIcon = this.props.data.current_observation.icon;
-    let condition = this.props.data.current_observation.weather;
-    let time = this.props.data.current_observation.observation_time;
-    let temp = this.props.data.current_observation.temp_f;
-    let summary = this.props.data.forecast.txt_forecast.forecastday[0].fcttext;
-    let low = this.props.data.forecast.simpleforecast.forecastday[0].low.fahrenheit;
-    let high = this.props.data.forecast.simpleforecast.forecastday[0].high.fahrenheit;
+    let current = this.props.data.current_observation;
+    let forecast = this.props.data.forecast;
+
+    let location = current.display_location.full;
+    let weatherIcon = current.icon;
+    let condition = current.weather;
+    let time = current.observation_time;
+    let temp = current.temp_f;
+    let summary = forecast.txt_forecast.forecastday[0].fcttext;
+    let low = forecast.simpleforecast.forecastday[0].low.fahrenheit;
+    let high = forecast.simpleforecast.forecastday[0].high.fahrenheit;
 
     return (
       <div className='Weather'>
         <h2 className='city-name-title'>{location}</h2>
         <div className='icon-temp-container'>
-          <img className='condition-icon' src={this.props.icons[weatherIcon]} alt={weatherIcon}/>
+          <img
+            className='condition-icon'
+            src={this.props.icons[weatherIcon]}
+            alt={weatherIcon}/>
           <h1 className='current-temp'>{temp}&#8457;</h1>
           <div className='high-low-temp'>
             <h3 className='high-temp'>High: {high}&#8457;</h3>
@@ -31,5 +38,6 @@ class Weather extends Component {
   }
 
 }
+Weather.propTypes = { data: PropTypes.object, icons: PropTypes.object };
 
 export default Weather;

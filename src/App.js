@@ -16,24 +16,25 @@ class App extends Component {
       hourly: true,
       mode: 'welcome',
       data
-    }
+    };
     this.getData = this.getData.bind(this);
     this.toggleHourly = this.toggleHourly.bind(this);
     this.suggestCities = this.suggestCities.bind(this);
   }
 
-  componentWillMount(){
+  componentWillMount() {
     let cities = new Trie();
+    let location = localStorage.getItem('location');
+
     cities.populate(data);
     this.setState({cities});
-    let location = localStorage.getItem('location');
     if (location) {
       this.getData(location);
     }
   }
 
-  suggestCities(prefix){
-    return this.state.cities.suggest(prefix).slice(0,10);
+  suggestCities(prefix) {
+    return this.state.cities.suggest(prefix).slice(0, 10);
   }
 
   render() {
@@ -53,10 +54,16 @@ class App extends Component {
             <Search getData={this.getData} suggestCities={this.suggestCities}/>
           </div>
           <Weather data={this.state.data} icons={this.props.icons}/>
-          <h2 className='forecast-label'>Forecast</h2>
-          <ForecastControl currentHourly={this.state.hourly} toggleHourly={this.toggleHourly}/>
-          { this.state.hourly && <Hourly data={this.state.data} icons={this.props.icons}/> }
-          { !this.state.hourly && <Daily data={this.state.data} icons={this.props.icons}/> }
+          <h2 className='forecast-label'>
+            Forecast
+          </h2>
+          <ForecastControl
+            currentHourly={this.state.hourly}
+            toggleHourly={this.toggleHourly}/>
+          { this.state.hourly &&
+            <Hourly data={this.state.data} icons={this.props.icons}/> }
+          { !this.state.hourly &&
+            <Daily data={this.state.data} icons={this.props.icons}/> }
         </div>
       );
     }
@@ -64,14 +71,16 @@ class App extends Component {
   getData(location) {
     location = location.split(',');
     let  request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${location[1]}/${location[0]}.json`;
+
     if (location.length === 1) {
       request = `http://api.wunderground.com/api/${key}/conditions/hourly/forecast10day/q/${location}.json`;
     }
     const promise = fetch(request).then(data => data.json()).then(result => this.setState({data: result, mode: 'weather'}));
+
     return promise;
   }
-  
-  toggleHourly(){
+
+  toggleHourly() {
     this.setState({hourly: !this.state.hourly});
   }
 }

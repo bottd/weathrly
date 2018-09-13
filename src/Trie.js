@@ -35,7 +35,10 @@ class Trie {
         return false;
       }
     }, this);
-    if (key === undefined) { return [] }
+
+    if (key === undefined) {
+      return [];
+    }
 
     return this.getWords(phrase, key);
   }
