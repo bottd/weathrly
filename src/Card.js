@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Card.css';
 
 class Card extends Component {
@@ -14,6 +15,12 @@ class Card extends Component {
     );
   }
 }
+Card.propTypes = {
+  weekday: PropTypes.string,
+  date: PropTypes.string,
+  img: PropTypes.string,
+  temp: PropTypes.string
+};
 
 
 export default Card;

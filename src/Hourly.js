@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Card from './Card';
 import './Hourly.css';
 
@@ -8,9 +9,15 @@ class Hourly extends Component {
       let hour = day.FCTTIME.civil;
       let weatherIcon = day.icon;
       let avg = day.temp.english;
+
       return (
-        <Card date={hour} img={this.props.icons[weatherIcon]} temp={avg} key={index}/>
-      )
+        <Card
+          date={hour}
+          img={this.props.icons[weatherIcon]}
+          temp={avg}
+          key={index}
+        />
+      );
     });
 
     return (
@@ -20,5 +27,9 @@ class Hourly extends Component {
     );
   }
 }
+Hourly.propTypes = {
+  data: PropTypes.object,
+  icons: PropTypes.object
+};
 
 export default Hourly;
